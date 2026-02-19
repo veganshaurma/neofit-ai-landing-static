@@ -1,0 +1,54 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" fill="none">
+  <defs>
+    <!-- Background radial -->
+    <radialGradient id="bgGrad" cx="40%" cy="35%" r="70%">
+      <stop offset="0%"  stop-color="#1c1b3a"/>
+      <stop offset="100%" stop-color="#0b0b17"/>
+    </radialGradient>
+
+    <!-- Main N gradient: cyan → indigo → purple -->
+    <linearGradient id="nGrad" x1="120" y1="100" x2="392" y2="420" gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#22d3ee"/>
+      <stop offset="50%"  stop-color="#818cf8"/>
+      <stop offset="100%" stop-color="#c084fc"/>
+    </linearGradient>
+
+    <!-- Glow filter for N -->
+    <filter id="glow" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Subtle inner glow for background orbs -->
+    <filter id="softBlur">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="512" height="512" fill="url(#bgGrad)"/>
+
+  <!-- Decorative glow orbs -->
+  <circle cx="370" cy="140" r="100" fill="#818cf8" opacity="0.12" filter="url(#softBlur)"/>
+  <circle cx="140" cy="370" r="110" fill="#22d3ee" opacity="0.10" filter="url(#softBlur)"/>
+
+  <!-- Letter N — drawn as a path for perfect geometry -->
+  <!-- Left vertical bar -->
+  <rect x="100" y="112" width="72" height="288" rx="8" fill="url(#nGrad)" filter="url(#glow)"/>
+  <!-- Right vertical bar -->
+  <rect x="340" y="112" width="72" height="288" rx="8" fill="url(#nGrad)" filter="url(#glow)"/>
+  <!-- Diagonal stroke (top-left to bottom-right) -->
+  <polygon
+    points="172,112 244,112 340,354 340,400 268,400 172,158"
+    fill="url(#nGrad)"
+    filter="url(#glow)"
+  />
+
+  <!-- Small AI dots accent (bottom-right corner, inside safe circle zone) -->
+  <circle cx="340" cy="404" r="10" fill="#22d3ee" opacity="0.9"/>
+  <circle cx="368" cy="390" r="7"  fill="#818cf8" opacity="0.75"/>
+  <circle cx="358" cy="418" r="5"  fill="#c084fc" opacity="0.6"/>
+</svg>
