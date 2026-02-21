@@ -26,18 +26,28 @@ export const TELEGRAM_BOT_URL = "https://t.me/neofit_ai_bot";
 const HERO_IMG =
   "https://files.manuscdn.com/user_upload_by_module/session_file/310519663332980412/extRBTLqMYwoqhXL.jpg";
 
-const PRICING_ROWS = [
+const TRUST_IMG = "/arseniy-trust.jpg";
+
+const PRICING_ROWS_RU = [
   { packs: 1, credits: "500 000", price: "2 499 ₽" },
   { packs: 3, credits: "1 500 000", price: "7 497 ₽" },
   { packs: 5, credits: "2 500 000", price: "12 495 ₽" },
   { packs: 10, credits: "5 000 000", price: "24 990 ₽" },
 ];
 
+const PRICING_ROWS_EN = [
+  { packs: 1, credits: "500 000", price: "$29" },
+  { packs: 3, credits: "1 500 000", price: "$87" },
+  { packs: 5, credits: "2 500 000", price: "$145" },
+  { packs: 10, credits: "5 000 000", price: "$290" },
+];
+
 const AUDIENCE_EMOJIS = ["🏋️", "🔄", "💡", "📊"];
 
 export default function Home() {
-  const { t } = useLocale();
+  const { t, locale } = useLocale();
   const l = t.landing;
+  const PRICING_ROWS = locale === "ru" ? PRICING_ROWS_RU : PRICING_ROWS_EN;
 
   return (
     <div className="min-h-screen flex flex-col">
@@ -475,7 +485,7 @@ export default function Home() {
                   }}
                 >
                   <img
-                    src={HERO_IMG}
+                    src={TRUST_IMG}
                     alt="Arseniy Kim"
                     className="w-full h-full object-cover object-top"
                   />
