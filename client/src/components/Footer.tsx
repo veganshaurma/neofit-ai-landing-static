@@ -86,12 +86,6 @@ export default function Footer() {
                   {link.label}
                 </a>
               ))}
-              <Link
-                href="/contacts"
-                className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-              >
-                {t.nav.contacts}
-              </Link>
             </div>
           </div>
 

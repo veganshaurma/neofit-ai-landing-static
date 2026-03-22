@@ -12,7 +12,6 @@ import CourseDetail from "./pages/CourseDetail";
 import Checkout from "./pages/Checkout";
 import About from "./pages/About";
 import FAQ from "./pages/FAQ";
-import Contacts from "./pages/Contacts";
 import Legal from "./pages/Legal";
 import Admin from "./pages/Admin";
 
@@ -25,7 +24,6 @@ function Router() {
       <Route path="/checkout/:slug" component={Checkout} />
       <Route path="/about" component={About} />
       <Route path="/faq" component={FAQ} />
-      <Route path="/contacts" component={Contacts} />
       <Route path="/legal/:type" component={Legal} />
       <Route path="/admin" component={Admin} />
       <Route path="/admin/products" component={Admin} />
