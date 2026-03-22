@@ -18,9 +18,7 @@ export default function Header() {
     { href: "#pricing", label: t.nav.pricing },
   ];
 
-  const pageLinks = [
-    { href: "/contacts", label: t.nav.contacts },
-  ];
+  const pageLinks: { href: string; label: string }[] = [];
 
   const handleAnchorClick = (
     e: React.MouseEvent<HTMLAnchorElement>,
