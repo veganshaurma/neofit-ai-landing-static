@@ -5,7 +5,7 @@ import { useLocale } from "@/contexts/LocaleContext";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { motion } from "framer-motion";
-import { Instagram, Send, Youtube, Mail } from "lucide-react";
+import { Instagram, Send, Youtube } from "lucide-react";
 
 export default function Contacts() {
   const { t } = useLocale();
@@ -14,7 +14,6 @@ export default function Contacts() {
     { icon: Instagram, label: "Instagram", href: "https://instagram.com/arseniy_kim", color: "from-pink-500 to-purple-500" },
     { icon: Send, label: "Telegram", href: "https://t.me/arseniy_kim", color: "from-blue-400 to-cyan-400" },
     { icon: Youtube, label: "YouTube", href: "https://youtube.com/@arseniy_kim", color: "from-red-500 to-red-600" },
-    { icon: Mail, label: "help@forko-it.com", href: "mailto:help@forko-it.com", color: "from-green-400 to-emerald-500" },
   ];
 
   return (

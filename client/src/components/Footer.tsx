@@ -118,7 +118,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-8 pt-6 border-t border-border/20 text-center text-xs text-muted-foreground">
-          &copy; {new Date().getFullYear()} Forko Trade Limited. {t.footer.rights}
+          &copy; {new Date().getFullYear()} ОсОО «К-Трейд ЛТД». {t.footer.rights}
         </div>
       </div>
     </footer>
