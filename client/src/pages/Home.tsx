@@ -14,7 +14,6 @@ import {
   Target,
   CheckCircle,
   Send,
-  Shield,
   Clock,
   Zap,
   CreditCard,
@@ -25,8 +24,6 @@ export const TELEGRAM_BOT_URL = "https://t.me/neofit_ai_bot";
 
 const HERO_IMG =
   "https://files.manuscdn.com/user_upload_by_module/session_file/310519663332980412/extRBTLqMYwoqhXL.jpg";
-
-const TRUST_IMG = "/arseniy-trust.jpg";
 
 const PRICING_ROWS_RU = [
   { packs: 1, credits: "500 000", price: "2 499 ₽" },
@@ -464,56 +461,6 @@ export default function Home() {
               </motion.div>
             ))}
           </div>
-        </div>
-      </section>
-
-      {/* ── 7. TRUST ── */}
-      <section id="trust" className="py-24">
-        <div className="container">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="max-w-3xl mx-auto glass-card rounded-2xl p-8 sm:p-12 gradient-border"
-          >
-            <div className="flex flex-col sm:flex-row gap-8 items-center sm:items-start">
-              <div className="flex-shrink-0">
-                <div
-                  className="w-28 h-28 rounded-2xl overflow-hidden"
-                  style={{
-                    border: "2px solid oklch(0.82 0.17 192 / 30%)",
-                  }}
-                >
-                  <img
-                    src={TRUST_IMG}
-                    alt="Arseniy Kim"
-                    className="w-full h-full object-cover object-top"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <div
-                  className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-medium mb-4"
-                  style={{
-                    background: "oklch(0.82 0.17 192 / 12%)",
-                    color: "oklch(0.82 0.17 192)",
-                    border: "1px solid oklch(0.82 0.17 192 / 30%)",
-                  }}
-                >
-                  <Shield className="w-3 h-3" />
-                  {l.trust.badge}
-                </div>
-
-                <h2 className="text-2xl sm:text-3xl font-bold font-[Outfit] mb-4">
-                  <span className="gradient-text">{l.trust.title}</span>
-                </h2>
-                <p className="text-muted-foreground leading-relaxed">
-                  {l.trust.bio}
-                </p>
-              </div>
-            </div>
-          </motion.div>
         </div>
       </section>
 
